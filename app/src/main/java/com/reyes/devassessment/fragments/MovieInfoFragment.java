@@ -23,7 +23,8 @@ public class MovieInfoFragment extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_movie_info, container, false);
 
         ivCover = (ImageView) view.findViewById(R.id.ivCover);
@@ -41,10 +42,12 @@ public class MovieInfoFragment extends Fragment {
         tvYearReleased.setText(movie.getYear() + "");
         tvOverview.setText(movie.getOverview());
 
-        ImageDownloaderAsyncTask coverImgDownloaderAsyncTask = new ImageDownloaderAsyncTask(ivCover);
+        ImageDownloaderAsyncTask coverImgDownloaderAsyncTask
+                = new ImageDownloaderAsyncTask(ivCover);
         coverImgDownloaderAsyncTask.execute(movie.getCoverUrl());
 
-        ImageDownloaderAsyncTask backdropImgDownloaderAsyncTask = new ImageDownloaderAsyncTask(ivBackdrop);
+        ImageDownloaderAsyncTask backdropImgDownloaderAsyncTask
+                = new ImageDownloaderAsyncTask(ivBackdrop);
         backdropImgDownloaderAsyncTask.execute(movie.getBackdropUrl());
     }
 }

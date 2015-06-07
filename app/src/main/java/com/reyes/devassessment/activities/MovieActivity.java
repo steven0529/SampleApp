@@ -27,7 +27,8 @@ public class MovieActivity extends Activity {
     }
 
     public void setMovie(Movie movie) {
-        MovieInfoFragment movieInfoFrag = (MovieInfoFragment) getFragmentManager().findFragmentById(R.id.movieInfoFrag);
+        MovieInfoFragment movieInfoFrag
+                = (MovieInfoFragment) getFragmentManager().findFragmentById(R.id.movieInfoFrag);
         if (movieInfoFrag != null)
             movieInfoFrag.setMovie(movie);
     }

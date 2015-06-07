@@ -23,7 +23,8 @@ public class MovieJsonParser {
             Movie[] movieArray = new Movie[moviesJsonArray.length()];
             for(int i = 0; i < moviesJsonArray.length(); i++) {
                 JSONObject movieJsonObj = moviesJsonArray.getJSONObject(i);
-                Movie movie = new Movie(parseMovieGenres(movieJsonObj.getJSONArray(Movie.TAG_GENRES)),
+                Movie movie = new Movie(
+                        parseMovieGenres(movieJsonObj.getJSONArray(Movie.TAG_GENRES)),
                         movieJsonObj.getInt(Movie.TAG_ID),
                         movieJsonObj.getString(Movie.TAG_IMDB_CODE),
                         movieJsonObj.getString(Movie.TAG_LANGUAGE),

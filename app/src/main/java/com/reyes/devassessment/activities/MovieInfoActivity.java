@@ -39,10 +39,12 @@ public class MovieInfoActivity extends ActionBarActivity {
         tvYearReleased.setText(movie.getYear() + "");
         tvOverview.setText(movie.getOverview());
 
-        ImageDownloaderAsyncTask coverImgDownloaderAsyncTask = new ImageDownloaderAsyncTask(ivCover);
+        ImageDownloaderAsyncTask coverImgDownloaderAsyncTask
+                = new ImageDownloaderAsyncTask(ivCover);
         coverImgDownloaderAsyncTask.execute(movie.getCoverUrl());
 
-        ImageDownloaderAsyncTask backdropImgDownloaderAsyncTask = new ImageDownloaderAsyncTask(ivBackdrop);
+        ImageDownloaderAsyncTask backdropImgDownloaderAsyncTask
+                = new ImageDownloaderAsyncTask(ivBackdrop);
         backdropImgDownloaderAsyncTask.execute(movie.getBackdropUrl());
     }
 }

@@ -46,8 +46,7 @@ public class MovieListFragment extends Fragment {
                 view.findViewById(R.id.tvNoDataFound),
                 view.findViewById(R.id.loadingPanel),
                 R.layout.movie_item,
-                Movie.class
-        );
+                Movie.class);
 
         moviesAdapterView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -76,11 +75,9 @@ public class MovieListFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if (logoDownloaderQueue != null && !logoDownloaderQueue.isEmpty()) {
-            for (int i = 0; i < logoDownloaderQueue.size(); i++) {
+        if (logoDownloaderQueue != null && !logoDownloaderQueue.isEmpty())
+            for (int i = 0; i < logoDownloaderQueue.size(); i++)
                 logoDownloaderQueue.remove().cancel(true);
-            }
-        }
     }
 
     public void populateListView(List<Movie> movies) {
@@ -90,9 +87,8 @@ public class MovieListFragment extends Fragment {
         startLoadingBackdrops();
         if ((getResources().getConfiguration().screenLayout &
                 Configuration.SCREENLAYOUT_SIZE_MASK) ==
-                Configuration.SCREENLAYOUT_SIZE_LARGE) {
+                Configuration.SCREENLAYOUT_SIZE_LARGE)
             ((MovieActivity)getActivity()).setMovie(movies.get(0));
-        }
     }
 
     public void displayNoDataFound() {
