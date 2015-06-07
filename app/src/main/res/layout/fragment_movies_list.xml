@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:padding="10dp"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/background_light"/>
+
+    <include layout="@layout/loading_panel_layout" />
+
+    <include layout="@layout/no_data_found_layout" />
+
+    <ListView
+        android:id="@+id/lvMovies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="@android:color/white"
+        android:scrollbarStyle="insideOverlay"
+        android:dividerHeight="1dp"
+        android:visibility="gone">
+    </ListView>
+</LinearLayout>

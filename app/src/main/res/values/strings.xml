@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Sample App</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="json_link1">https://dl.dropboxusercontent.com/u/5624850/movielist/list_movies_page1.json</string>
+    <string name="json_link2">https://dl.dropboxusercontent.com/u/5624850/movielist/list_movies_page2.json</string>
+    <string name="json_link3">https://dl.dropboxusercontent.com/u/5624850/movielist/list_movies_page3.json</string>
+    <string name="json_link4">https://dl.dropboxusercontent.com/u/5624850/movielist/list_movies_page4.json</string>
+    <string name="json_link5">https://dl.dropboxusercontent.com/u/5624850/movielist/list_movies_page5.json</string>
+</resources>
